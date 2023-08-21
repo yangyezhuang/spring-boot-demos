@@ -38,26 +38,26 @@
 
 ## 各 Module 介绍
 
-|                                      | Module 名称                                                | Module 介绍                               |
-|--------------------------------------|----------------------------------------------------------|-----------------------------------------|
-| <input type="checkbox"  >  | [spring-boot-aop](./spring-boot-aop)                     | spring-boot 演示 aop                      |
-| <input type="checkbox"  >  | [spring-boot-easyexcel](./spring-boot-easyexcel)         | spring-boot 集成 easyexcel                |
-| <input type="checkbox"  >  | [spring-boot-elasticsearch](./spring-boot-elasticsearch) | spring-boot 集成 elasticsearch 用于全文搜索     |
-| <input type="checkbox" checked='' >  | [spring-boot-helloworld](./spring-boot-helloworld)       | spring-boot 演示 helloworld               |
-| <input type="checkbox" checked='' >  | [spring-boot-jdbc](./spring-boot-jdbc)                   | spring-boot 集成 jdbc 用于操作数据库             |
-| <input type="checkbox" checked='' >  | [spring-boot-jpa](./spring-boot-jpa)                     | spring-boot 集成 jpa 用于操作数据库              |
-| <input type="checkbox"  >  | [spring-boot-jwt](./spring-boot-jwt)                     | spring-boot 集成 jwt                      |
-| <input type="checkbox"  >  | [spring-boot-kryo](./spring-boot-kryo)                   | spring-boot 集成 kryo 用于序列化               |
-| <input type="checkbox"  >  | [spring-boot-minio](./spring-boot-minio)                 | spring-boot 集成 minio 用于对象存储             |
-| <input type="checkbox" checked='' >  | [spring-boot-mybatis](./spring-boot-mybatis)             | spring-boot 集成 mybatis 用于操作数据库          |
-| <input type="checkbox"  >  | [spring-boot-netty](./spring-boot-netty)                 | spring-boot 集成 netty                    |
-| <input type="checkbox" checked='' >  | [spring-boot-properties](./spring-boot-properties)       | spring-boot 读取 properties 配置            |
-| <input type="checkbox" checked='' >  | [spring-boot-redis](./spring-boot-redis)                 | spring-boot 集成 redis 用于缓存               |
-| <input type="checkbox"  >  | [spring-boot-security](./spring-boot-security)           | spring-boot 集成 security                 |
-| <input type="checkbox"  >  | [spring-boot-shiro](./spring-boot-shiro)                 | spring-boot 集成 shiro                    |
-| <input type="checkbox" checked='' >  | [spring-boot-swagger](./spring-boot-swagger)             | spring-boot 集成 swagger 用于统一管理、测试 API 接口 |
-| <input type="checkbox" checked='' >  | [spring-boot-thymeleaf](./spring-boot-thymeleaf)         | spring-boot 集成 thymeleaf                |
-| <input type="checkbox"  >  | [spring-boot-xxljob](./spring-boot-xxljob)            | spring-boot 集成 xxl-job 用于任务调度           |
+|                                     | Module 名称                                                | Module 介绍                               |
+|-------------------------------------|----------------------------------------------------------|-----------------------------------------|
+|   | [spring-boot-aop](./spring-boot-aop)                     | spring-boot 演示 aop                      |
+|   | [spring-boot-easyexcel](./spring-boot-easyexcel)         | spring-boot 集成 easyexcel                |
+|   | [spring-boot-elasticsearch](./spring-boot-elasticsearch) | spring-boot 集成 elasticsearch 用于全文搜索     |
+| √ | [spring-boot-helloworld](./spring-boot-helloworld)       | spring-boot 演示 helloworld               |
+| √ | [spring-boot-jdbc](./spring-boot-jdbc)                   | spring-boot 集成 jdbc 用于操作数据库             |
+| √ | [spring-boot-jpa](./spring-boot-jpa)                     | spring-boot 集成 jpa 用于操作数据库              |
+|   | [spring-boot-jwt](./spring-boot-jwt)                     | spring-boot 集成 jwt                      |
+|   | [spring-boot-kryo](./spring-boot-kryo)                   | spring-boot 集成 kryo 用于序列化               |
+|   | [spring-boot-minio](./spring-boot-minio)                 | spring-boot 集成 minio 用于对象存储             |
+| √ | [spring-boot-mybatis](./spring-boot-mybatis)             | spring-boot 集成 mybatis 用于操作数据库          |
+|   | [spring-boot-netty](./spring-boot-netty)                 | spring-boot 集成 netty                    |
+| √ | [spring-boot-properties](./spring-boot-properties)       | spring-boot 读取 properties 配置            |
+| √ | [spring-boot-redis](./spring-boot-redis)                 | spring-boot 集成 redis 用于缓存               |
+|   | [spring-boot-security](./spring-boot-security)           | spring-boot 集成 security                 |
+|   | [spring-boot-shiro](./spring-boot-shiro)                 | spring-boot 集成 shiro                    |
+| √ | [spring-boot-swagger](./spring-boot-swagger)             | spring-boot 集成 swagger 用于统一管理、测试 API 接口 |
+| √ | [spring-boot-thymeleaf](./spring-boot-thymeleaf)         | spring-boot 集成 thymeleaf                |
+|   | [spring-boot-xxljob](./spring-boot-xxljob)            | spring-boot 集成 xxl-job 用于任务调度           |
 
 ## 其他
 
