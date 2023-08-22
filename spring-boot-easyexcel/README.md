@@ -223,7 +223,7 @@ public class ExcelController {
 ```
 
 
-## MybatisApplication.java
+## EasyExcelApplication.java
 ```java
 @MapperScan(basePackages = "com.yyz.easyexcel.dao")
 @SpringBootApplication
