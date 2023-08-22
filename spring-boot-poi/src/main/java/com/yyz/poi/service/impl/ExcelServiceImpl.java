@@ -2,7 +2,7 @@ package com.yyz.poi.service.impl;
 
 import com.yyz.poi.dao.UserDao;
 import com.yyz.poi.pojo.User;
-import com.yyz.poi.service.UserService;
+import com.yyz.poi.service.ExcelService;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -26,7 +26,7 @@ import java.util.List;
  * @date 2023/8/22 14:05
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class ExcelServiceImpl implements ExcelService {
 
     @Autowired
     UserDao userDao;

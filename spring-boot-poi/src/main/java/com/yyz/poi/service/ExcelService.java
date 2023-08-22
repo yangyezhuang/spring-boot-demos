@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author YangYezhuang
  * @date 2023/8/22 14:05
  */
-public interface UserService {
+public interface ExcelService {
     void importExcel(MultipartFile file) throws Exception;
 
     void exportExcel(HttpServletResponse response)  throws Exception;

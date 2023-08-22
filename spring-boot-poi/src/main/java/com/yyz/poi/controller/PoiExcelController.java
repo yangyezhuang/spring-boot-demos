@@ -1,6 +1,6 @@
 package com.yyz.poi.controller;
 
-import com.yyz.poi.service.UserService;
+import com.yyz.poi.service.ExcelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,16 +20,16 @@ import javax.servlet.http.HttpServletResponse;
 public class PoiExcelController {
 
     @Autowired
-    UserService userService;
+    ExcelService excelService;
 
     @PostMapping("/upload")
     public void upload(@RequestBody MultipartFile file) throws Exception {
-        userService.importExcel(file);
+        excelService.importExcel(file);
     }
 
     @GetMapping("/download")
     public void download(HttpServletResponse response) throws Exception {
-        userService.exportExcel(response);
+        excelService.exportExcel(response);
     }
 
 }
