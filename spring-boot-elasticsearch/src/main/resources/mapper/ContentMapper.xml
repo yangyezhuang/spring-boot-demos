@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyz.elasticsearch.dao.ContentDao">
+
+    <resultMap type="com.yyz.elasticsearch.entity.Content" id="ContentMap">
+        <result property="goodId" column="good_id" jdbcType="VARCHAR"/>
+        <result property="goodShop" column="good_shop" jdbcType="VARCHAR"/>
+        <result property="goodName" column="good_name" jdbcType="VARCHAR"/>
+        <result property="goodPrice" column="good_price" jdbcType="VARCHAR"/>
+        <result property="commentNum" column="comment_num" jdbcType="VARCHAR"/>
+        <result property="goodLink" column="good_link" jdbcType="VARCHAR"/>
+        <result property="goodImg" column="good_img" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询全部-->
+    <select id="queryAll" resultMap="ContentMap">
+        select *
+        from goods
+    </select>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ContentMap">
+        select good_shop,
+               good_name,
+               good_price,
+               comment_num,
+               good_link,
+               good_img
+        from goods
+        where good_id = #{goodId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ContentMap">
+        select
+        good_id, good_shop, good_name, good_price, comment_num, good_link, good_img
+        from goods
+        <where>
+            <if test="goodShop != null and goodShop != ''">
+                and good_shop = #{goodShop}
+            </if>
+            <if test="goodName != null and goodName != ''">
+                and good_name = #{goodName}
+            </if>
+            <if test="goodPrice != null and goodPrice != ''">
+                and good_price = #{goodPrice}
+            </if>
+            <if test="commentNum != null and commentNum != ''">
+                and comment_num = #{commentNum}
+            </if>
+            <if test="goodLink != null and goodLink != ''">
+                and good_link = #{goodLink}
+            </if>
+            <if test="goodImg != null and goodImg != ''">
+                and good_img = #{goodImg}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from goods
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="" useGeneratedKeys="true">
+        insert into goods(good_shop, good_name, good_price, comment_num, good_link, good_img)
+        values (#{goodShop}, #{goodName}, #{goodPrice}, #{commentNum}, #{goodLink}, #{goodImg})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="" useGeneratedKeys="true">
+        insert into goods(good_shop, good_name, good_price, comment_num, good_link, good_img)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.goodShop}, #{entity.goodName}, #{entity.goodPrice}, #{entity.commentNum}, #{entity.goodLink},
+            #{entity.goodImg})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="" useGeneratedKeys="true">
+        insert into goods(good_shop, good_name, good_price, comment_num, good_link, good_img)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.goodShop}, #{entity.goodName}, #{entity.goodPrice}, #{entity.commentNum}, #{entity.goodLink},
+            #{entity.goodImg})
+        </foreach>
+        on duplicate key update
+        good_shop = values(good_shop),
+        good_name = values(good_name),
+        good_price = values(good_price),
+        comment_num = values(comment_num),
+        good_link = values(good_link),
+        good_img = values(good_img)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update goods
+        <set>
+            <if test="goodShop != null and goodShop != ''">
+                good_shop = #{goodShop},
+            </if>
+            <if test="goodName != null and goodName != ''">
+                good_name = #{goodName},
+            </if>
+            <if test="goodPrice != null and goodPrice != ''">
+                good_price = #{goodPrice},
+            </if>
+            <if test="commentNum != null and commentNum != ''">
+                comment_num = #{commentNum},
+            </if>
+            <if test="goodLink != null and goodLink != ''">
+                good_link = #{goodLink},
+            </if>
+            <if test="goodImg != null and goodImg != ''">
+                good_img = #{goodImg},
+            </if>
+        </set>
+        where good_id = #{goodId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete
+        from goods
+        where good_id = #{goodId}
+    </delete>
+
+</mapper>
+
