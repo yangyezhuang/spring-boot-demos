@@ -1,54 +1,31 @@
-package com.example.minio.service;
+package com.yyz.minio.service;
 
-//import com.orange.base.model.PageParams;
-//import com.orange.base.model.PageResult;
-//import com.orange.base.model.RestResponse;
-//import com.orange.media.model.dto.QueryMediaParamsDto;
-//import com.orange.media.model.dto.UploadFileParamsDto;
-//import com.orange.media.model.dto.UploadFileResultDto;
+import com.yyz.minio.pojo.*;
 
-import com.example.minio.pojo.*;
-
-import java.io.File;
 import java.io.IOException;
 
-public interface MediaFileService {
+public interface FileService {
 
     /**
      * @param pageParams          分页参数
      * @param queryMediaParamsDto 查询条件
-     * @return com.xuecheng.base.model.PageResult<com.xuecheng.media.model.po.MediaFiles>
+     * @return PageResult<MediaFiles>
      */
     PageResult<MediaFiles> queryMediaFiles(PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto);
 
 
-    //    /**
-//     * @param companyId           机构id
-//     * @param uploadFileParamsDto 文件信息
-//     * @param bytes               文件字节数组
-//     * @param folder              桶下边的子目录
-//     * @param objectName          对象名称
-//     * @return com.xuecheng.media.model.dto.UploadFileResultDto
-//     */
-//    UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, byte[] bytes, String folder, String objectName);
-    UploadFileResultDto uploadFile(UploadFileParamsDto uploadFileParamsDto, String localFilePath);
-
     /**
-     * 将文件信息添加到文件表
-     *
-     * @param companyId           机构id
-     * @param uploadFileParamsDto 上传文件的信息
-     * @param objectName          对象名称
-     * @param fileMD5             文件md5码
-     * @param bucket              桶
+     * @param uploadFileParamsDto 文件信息
+     * @param localFilePath       文件路径
+     * @return UploadFileResultDto
      */
-//    MediaFiles addMediaFilesToDB(Long companyId, UploadFileParamsDto uploadFileParamsDto, String objectName, String fileMD5, String bucket);
+    UploadFileResultDto uploadFile(UploadFileParamsDto uploadFileParamsDto, String localFilePath);
 
     /**
      * 检查文件是否存在
      *
-     * @param fileMd5 文件的md5
-     * @return
+     * @param fileMd5 文件MD5
+     * @return boolean
      */
     RestResponse<Boolean> checkFile(String fileMd5);
 
@@ -57,7 +34,7 @@ public interface MediaFileService {
      *
      * @param fileMd5    文件的MD5
      * @param chunkIndex 分块序号
-     * @return
+     * @return boolean
      */
     RestResponse<Boolean> checkChunk(String fileMd5, int chunkIndex);
 
@@ -66,11 +43,9 @@ public interface MediaFileService {
      *
      * @param fileMd5 文件MD5
      * @param chunk   分块序号
-     *                //     * @param bytes   文件字节
-     * @return
+     * @return RestResponse
      */
     RestResponse uploadChunk(String fileMd5, int chunk, String localChunkFilePath);
-//    RestResponse uploadChunk(String fileMd5, int chunk, byte[] bytes);
 
     /**
      * 合并分块
@@ -78,7 +53,7 @@ public interface MediaFileService {
      * @param fileMd5             文件MD5
      * @param chunkTotal          分块数量
      * @param uploadFileParamsDto 文件信息
-     * @return
+     * @return RestResponse
      */
     RestResponse mergeChunks(String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto) throws IOException;
 
@@ -86,11 +61,10 @@ public interface MediaFileService {
     /**
      * 根据媒资id获取媒资
      *
-     * @param mediaId
-     * @return
+     * @param mediaId 媒资id
+     * @return MediaFiles
      */
     MediaFiles getFileById(String mediaId);
-//    MediaFiles getFileById(String mediaId);
 
     /**
      * 从minio下载文件
@@ -98,7 +72,7 @@ public interface MediaFileService {
      * @param file       下载后的文件
      * @param bucket     minio中的桶
      * @param objectName minio中的对象名称
-     * @return
+     * @return file
      */
 //    File downloadFileFromMinio(File file, String bucket, String objectName);
 
@@ -109,27 +83,33 @@ public interface MediaFileService {
      * @param bucket        上传到的桶
      * @param objectName    上传到的objectName
      */
-//    void addMediaFilesToMinIO(String filePath, String bucket, String objectName);
     boolean addMediaFilesToMinIO(String localFilePath, String mimeTyep, String bucket, String objectName);
 
     /**
-     * 向数据库保存文件信息
+     * 将文件信息添加到文件表
      *
-     * @param fileMd5
-     * @param uploadFileParamsDto
-     * @param bucket
-     * @param objectName
-     * @return
+     * @param uploadFileParamsDto 上传文件的信息
+     * @param objectName          对象名称
+     * @param fileMd5             文件md5
+     * @param bucket              桶
      */
     MediaFiles addMediaFilesToDB(String fileMd5, UploadFileParamsDto uploadFileParamsDto, String bucket, String objectName);
 
+
+    /**
+     * 删除文件
+     *
+     * @param fileId
+     * @return
+     */
+    boolean deleteObject(String fileId);
 
     /**
      * 根据文件md5，生成在minio中的文件路径
      *
      * @param fileMd5   文件md5
      * @param extension 文件后缀名
-     * @return
+     * @return path
      */
 //    String getFilePathByMd5(String fileMd5, String extension);
 }

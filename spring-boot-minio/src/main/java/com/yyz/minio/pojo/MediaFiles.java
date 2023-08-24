@@ -1,4 +1,4 @@
-package com.example.minio.pojo;
+package com.yyz.minio.pojo;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
@@ -7,11 +7,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * <p>
- * 媒资信息
- * </p>
- *
- * @author itcast
+ * 文件信息
  */
 @Data
 @TableName("media_files")

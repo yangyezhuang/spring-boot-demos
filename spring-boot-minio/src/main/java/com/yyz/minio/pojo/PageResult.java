@@ -1,4 +1,4 @@
-package com.example.minio.pojo;
+package com.yyz.minio.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,6 @@ import java.util.List;
 
 /**
  * 分页查询结果模型类
- *
- * @param <T>
  */
 @Data
 @AllArgsConstructor

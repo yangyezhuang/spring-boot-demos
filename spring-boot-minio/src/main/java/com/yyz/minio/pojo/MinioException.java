@@ -1,25 +1,25 @@
-package com.example.minio.pojo;
+package com.yyz.minio.pojo;
 
 /**
  * 自定义异常类型
  */
-public class OrangeException extends RuntimeException {
+public class MinioException extends RuntimeException {
     private String errMessage;
 
     public String getErrMessage() {
         return errMessage;
     }
 
-    public OrangeException(String message) {
+    public MinioException(String message) {
         super(message);
         this.errMessage = message;
     }
 
     public static void cast(String message) {
-        throw new OrangeException(message);
+        throw new MinioException(message);
     }
 
     public static void cast(CommonError error) {
-        throw new OrangeException(error.getErrMessage());
+        throw new MinioException(error.getErrMessage());
     }
 }

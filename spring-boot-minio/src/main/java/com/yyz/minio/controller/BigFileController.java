@@ -1,8 +1,8 @@
-package com.example.minio.controller;
+package com.yyz.minio.controller;
 
-import com.example.minio.pojo.RestResponse;
-import com.example.minio.pojo.UploadFileParamsDto;
-import com.example.minio.service.MediaFileService;
+import com.yyz.minio.pojo.RestResponse;
+import com.yyz.minio.pojo.UploadFileParamsDto;
+import com.yyz.minio.service.FileService;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,30 +16,35 @@ import java.io.IOException;
  * 大文件上传接口
  */
 @RestController
-public class BigFilesController {
+public class BigFileController {
+
     @Autowired
-    MediaFileService mediaFileService;
+    FileService fileService;
 
     /**
-     * 文件上传前检查文件
+     * 上传前检查文件
      */
     @PostMapping("/upload/checkfile")
     public RestResponse<Boolean> checkFile(@RequestParam("fileMd5") String fileMd5) {
-        return mediaFileService.checkFile(fileMd5);
+        return fileService.checkFile(fileMd5);
     }
 
+
     /**
-     * 分块文件上传前检查分块
+     * 分块上传前检查分块
      */
     @PostMapping("/upload/checkchunk")
     public RestResponse<Boolean> checkChunk(@RequestParam("fileMd5") String fileMd5, @RequestParam("chunk") int chunk) {
-        return mediaFileService.checkChunk(fileMd5, chunk);
+        return fileService.checkChunk(fileMd5, chunk);
     }
+
 
     /**
      * 上传分块文件
+     * <p>
+     * 前端分好块后调用上传接口，避免后端分块造成资源消耗
      */
-    @PostMapping("/upload/uploadchunk")
+    @PostMapping("/upload/chunk")
     public RestResponse uploadChunk(@RequestParam("file") MultipartFile file, @RequestParam("fileMd5") String fileMd5, @RequestParam("chunk") int chunk) throws Exception {
         // 创建临时文件
         File tempFile = File.createTempFile("minio", ".temp");
@@ -47,9 +52,10 @@ public class BigFilesController {
         // 文件路径
         String localFilePath = tempFile.getAbsolutePath();
 
-        RestResponse restResponse = mediaFileService.uploadChunk(fileMd5, chunk, localFilePath);
+        RestResponse restResponse = fileService.uploadChunk(fileMd5, chunk, localFilePath);
         return restResponse;
     }
+
 
     /**
      * 合并分块文件
@@ -60,7 +66,7 @@ public class BigFilesController {
         UploadFileParamsDto uploadFileParamsDto = new UploadFileParamsDto();
         uploadFileParamsDto.setFilename(fileName);
         uploadFileParamsDto.setFileType("001002");
-        RestResponse restResponse = mediaFileService.mergeChunks( fileMd5, chunkTotal, uploadFileParamsDto);
+        RestResponse restResponse = fileService.mergeChunks(fileMd5, chunkTotal, uploadFileParamsDto);
         return restResponse;
     }
 }

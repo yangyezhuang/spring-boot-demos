@@ -1,4 +1,4 @@
-package com.example.minio.service.impl;
+package com.yyz.minio.service.impl;
 
 import io.minio.ComposeObjectArgs;
 import io.minio.ComposeSource;

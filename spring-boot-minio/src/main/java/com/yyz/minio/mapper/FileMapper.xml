@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.minio.mapper.MediaFilesMapper">
+<mapper namespace="com.yyz.minio.mapper.FileMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.minio.pojo.MediaFiles">
+    <resultMap id="BaseResultMap" type="com.yyz.minio.pojo.MediaFiles">
         <id column="id" property="id"/>
         <result column="filename" property="filename"/>
         <result column="file_type" property="fileType"/>
