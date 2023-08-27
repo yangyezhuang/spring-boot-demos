@@ -21,7 +21,25 @@
     </properties>
 
     <modules>
+        <module>spring-boot-aop</module>
+        <module>spring-boot-easyexcel</module>
+        <module>spring-boot-elasticsearch</module>
         <module>spring-boot-helloworld</module>
+        <module>spring-boot-jdbc</module>
+        <module>spring-boot-jpa</module>
+        <module>spring-boot-jwt</module>
+        <module>spring-boot-logback</module>
+        <module>spring-boot-mail</module>
+        <module>spring-boot-minio</module>
+        <module>spring-boot-mybatis</module>
+        <module>spring-boot-netty</module>
+        <module>spring-boot-poi</module>
+        <module>spring-boot-properties</module>
+        <module>spring-boot-redis</module>
+        <module>spring-boot-security</module>
+        <module>spring-boot-shiro</module>
+        <module>spring-boot-swagger</module>
+        <module>spring-boot-thymeleaf</module>
     </modules>
 
 </project>
