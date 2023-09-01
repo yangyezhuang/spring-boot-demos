@@ -32,14 +32,19 @@
         <module>spring-boot-mail</module>
         <module>spring-boot-minio</module>
         <module>spring-boot-mybatis</module>
+        <module>spring-boot-mybatis-pagehelper</module>
+        <module>spring-boot-mybatis-plus</module>
         <module>spring-boot-netty</module>
+        <module>spring-boot-openfeign</module>
         <module>spring-boot-poi</module>
         <module>spring-boot-properties</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-response</module>
         <module>spring-boot-security</module>
         <module>spring-boot-shiro</module>
         <module>spring-boot-swagger</module>
         <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-validation</module>
     </modules>
 
 </project>
