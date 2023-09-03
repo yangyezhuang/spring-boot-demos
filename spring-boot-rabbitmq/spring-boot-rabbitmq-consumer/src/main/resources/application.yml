@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  rabbitmq:
+    # RabbitMQ服务的地址
+    host: node
+    port: 5672
+    username: guest
+    password: guest
+    # RabbitMQ 服务创建的虚拟主机(非必须)
+    virtual-host: /
