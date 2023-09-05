@@ -45,10 +45,12 @@
 | √ | [spring-boot-mybatis](./spring-boot-mybatis)                       | 集成 mybatis 用于操作数据库          |
 | √ | [spring-boot-mybatis-plus](./spring-boot-mybatis-plus)             | 集成 mybatis-plus 用于操作数据库     |
 | √ | [spring-boot-mybatis-pagehelper](./spring-boot-mybatis-pagehelper) | 集成 pagehelper 用于数据库分页       |
-| √ | [spring-boot-netty](./spring-boot-netty)                           | 集成 netty NIO通信                     |
-| √ | [spring-boot-openfeign](./spring-boot-openfeign)                       | 集成 openfeign 实现接口调用         |
+| √ | [spring-boot-netty](./spring-boot-netty)                           | 集成 netty NIO通信              |
+| √ | [spring-boot-openfeign](./spring-boot-openfeign)                     | 集成 openfeign 实现接口调用         |
 | √ | [spring-boot-poi](./spring-boot-poi)                               | 集成 poi 用于表格导出导入             |
 | √ | [spring-boot-properties](./spring-boot-properties)                 | 读取 properties 配置            |
+| √ | [spring-boot-quartz](./spring-boot-quartz)                     | 集成 Quartz 用于实现任务调度          |
+| √ | [spring-boot-rabbitmq](./spring-boot-rabbitmq)                       | 集成 RabbitMQ 用于实现消息队列        |
 | √ | [spring-boot-redis](./spring-boot-redis)                           | 集成 redis 用于缓存               |
 | √ | [spring-boot-response](./spring-boot-response)                     | 演示统一封装数据返回格式                |
 | √ | [spring-boot-security](./spring-boot-security)                     | 集成 security 用于认证和授权         |
@@ -56,7 +58,7 @@
 | √ | [spring-boot-swagger](./spring-boot-swagger)                       | 集成 swagger 用于统一管理、测试 API 接口 |
 | √ | [spring-boot-thymeleaf](./spring-boot-thymeleaf)                   | 集成 thymeleaf 用于前端模板渲染       |
 | √ | [spring-boot-validation](./spring-boot-validation)                 | 集成 validation 用于实现参数校验      |
-|   | [spring-boot-xxljob](./spring-boot-xxljob)                         | 集成 xxl-job 用于任务调度           |
+| √ | [spring-boot-xxljob](./spring-boot-xxljob)                         | 集成 xxl-job 用于任务调度           |
 
 
 ## Other

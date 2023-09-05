@@ -38,13 +38,17 @@
         <module>spring-boot-openfeign</module>
         <module>spring-boot-poi</module>
         <module>spring-boot-properties</module>
+        <module>spring-boot-quartz</module>
+        <module>spring-boot-rabbitmq</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-response</module>
         <module>spring-boot-security</module>
         <module>spring-boot-shiro</module>
         <module>spring-boot-swagger</module>
         <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-upload</module>
         <module>spring-boot-validation</module>
+        <module>spring-boot-xxljob</module>
     </modules>
 
 </project>
