@@ -1,0 +1,13 @@
+xxl:
+  job:
+    admin:
+      addresses: http://localhost:8088/xxl-job-admin/
+    executor:
+      # 执行器名称
+      appname: xxl-job-executor-sample
+      address:
+      ip: 192.168.31.242
+      port: 9999
+      logpath: D:\xxl-job-logs\
+      logretentiondays: 30
+    accessToken: default_token
