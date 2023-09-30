@@ -4,6 +4,7 @@ import com.yyz.jdbc.pojo.User;
 import com.yyz.jdbc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,26 +24,34 @@ public class UserServiceImpl implements UserService {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    @Transactional
     @Override
-    public List<Map<String, Object>> queryAll() {
+    public List<User> queryAll() {
         String sql = "select * from user";
-        List<Map<String, Object>> maps = jdbcTemplate.queryForList(sql);
-        return maps;
+        List<User> list = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(User.class));
+        return list;
     }
 
-    @Transactional
+
     @Override
-    public Map<String, Object> queryById(int id) {
+    public User queryById(int id) {
         try {
             String sql = "select * from user where id=?";
-            Map<String, Object> map = jdbcTemplate.queryForMap(sql, id);
-            return map;
+            User user = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(User.class), id);
+            return user;
         } catch (EmptyResultDataAccessException e) {
             e.printStackTrace();
         }
         return null;
     }
+
+
+    @Override
+    public int getCount() {
+        String sql = "select count(*) from user";
+        Integer count = jdbcTemplate.queryForObject(sql, Integer.class);
+        return count;
+    }
+
 
     @Transactional
     @Override

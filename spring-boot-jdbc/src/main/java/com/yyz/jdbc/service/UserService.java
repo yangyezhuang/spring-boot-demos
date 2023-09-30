@@ -12,9 +12,11 @@ import java.util.Map;
  * @date 2023/8/15 21:30
  */
 public interface UserService {
-    List<Map<String, Object>> queryAll();
+    List<User> queryAll();
 
-    Map<String, Object> queryById(int id);
+    User queryById(int id);
+
+    int getCount();
 
     int saveUser(User user);
 

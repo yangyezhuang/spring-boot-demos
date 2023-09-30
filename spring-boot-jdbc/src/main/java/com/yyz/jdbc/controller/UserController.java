@@ -27,7 +27,7 @@ public class UserController {
      * @return
      */
     @GetMapping("/list")
-    public List<Map<String, Object>> getUserList() {
+    public List<User> getUserList() {
         return userService.queryAll();
     }
 
@@ -39,8 +39,18 @@ public class UserController {
      * @return
      */
     @GetMapping("/{id}")
-    public Map<String, Object> queryById(@PathVariable("id") int id) {
+    public User queryById(@PathVariable("id") int id) {
         return userService.queryById(id);
+    }
+
+    /**
+     * 获取信息条数
+     *
+     * @return
+     */
+    @GetMapping("/count")
+    public int queryById() {
+        return userService.getCount();
     }
 
 

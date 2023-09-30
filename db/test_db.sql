@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : MySQL8
+ Source Server         : localhost
  Source Server Type    : MySQL
  Source Server Version : 80017
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 27/08/2023 18:33:44
+ Date: 07/09/2023 15:12:39
 */
 
 SET NAMES utf8mb4;
@@ -519,7 +519,7 @@ CREATE TABLE `suning_result`  (
   `graphics_card_capacity` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `graphics_card_type_size` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `screen_size` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-  INDEX `ix_suning_result_index`(`index`) USING BTREE
+  INDEX `ix_suning_result_index`(`index` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -1162,7 +1162,7 @@ CREATE TABLE `user`  (
   `sex` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '性别',
   `age` int(10) NULL DEFAULT NULL COMMENT '年龄',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
@@ -1172,10 +1172,12 @@ INSERT INTO `user` VALUES (2, '李四', '12345', '男', 64);
 INSERT INTO `user` VALUES (3, '王五', '12345', '女', 24);
 INSERT INTO `user` VALUES (4, '赵六', '12345', '男', 41);
 INSERT INTO `user` VALUES (5, '马奇', '12345', '女', 16);
-INSERT INTO `user` VALUES (6, '孙权', '1234', '男', 48);
-INSERT INTO `user` VALUES (12, '赵子龙', 'zzl', '男', 30);
-INSERT INTO `user` VALUES (17, 'ss', '111', '女', 10);
-INSERT INTO `user` VALUES (25, 'aaa', '22222', '女', 21);
-INSERT INTO `user` VALUES (27, 'tom', '123', '男', 11);
+INSERT INTO `user` VALUES (6, '孙权', '12345', '男', 48);
+INSERT INTO `user` VALUES (7, '爱丽丝', '12345', '女', 10);
+INSERT INTO `user` VALUES (12, '赵子龙', '12345', '男', 30);
+INSERT INTO `user` VALUES (17, '娜娜', '12345', '女', 10);
+INSERT INTO `user` VALUES (25, '小艾', '12345', '女', 21);
+INSERT INTO `user` VALUES (27, '小明', '12345', '男', 11);
+INSERT INTO `user` VALUES (30, '豆丁', '12345', '女', 10);
 
 SET FOREIGN_KEY_CHECKS = 1;
