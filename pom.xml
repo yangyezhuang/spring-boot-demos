@@ -43,6 +43,7 @@
         <module>spring-boot-redis</module>
         <module>spring-boot-response</module>
         <module>spring-boot-security</module>
+        <module>spring-boot-session</module>
         <module>spring-boot-shiro</module>
         <module>spring-boot-swagger</module>
         <module>spring-boot-thymeleaf</module>
