@@ -18,7 +18,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     /**
      * 查询全部用户信息
@@ -42,6 +42,7 @@ public class UserController {
         return userService.queryById(id);
     }
 
+
     /**
      * 根据username查询用户
      *
@@ -61,8 +62,12 @@ public class UserController {
      * @return
      */
     @PostMapping()
-    public int saveUser(@RequestBody User user) {
-        return userService.saveUser(user);
+    public String saveUser(@RequestBody User user) {
+        boolean result = userService.saveUser(user);
+        if (!result) {
+            return "添加失败";
+        }
+        return "添加成功";
     }
 
 
@@ -73,8 +78,12 @@ public class UserController {
      * @return
      */
     @PutMapping()
-    public int updateById(@RequestBody User user) {
-        return userService.updateById(user);
+    public String updateById(@RequestBody User user) {
+        boolean result = userService.update(user);
+        if (!result) {
+            return "更新失败";
+        }
+        return "更新成功";
     }
 
 
@@ -85,7 +94,11 @@ public class UserController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public int deleteById(@PathVariable("id") int id) {
-        return userService.deleteById(id);
+    public String deleteById(@PathVariable("id") int id) {
+        boolean result = userService.deleteById(id);
+        if (!result) {
+            return "删除失败";
+        }
+        return "删除成功";
     }
 }

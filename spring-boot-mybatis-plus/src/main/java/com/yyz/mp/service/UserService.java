@@ -1,7 +1,7 @@
 package com.yyz.mp.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.yyz.mp.pojo.User;
-import org.apache.ibatis.annotations.Delete;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import java.util.List;
  * @author YZ.YANG
  * @date 2023/8/15 18:30
  */
-public interface UserService {
+public interface UserService extends IService<User> {
     /**
-     * 查询全部用户信息
+     * 查询全部用户
      *
      * @return
      */
@@ -41,7 +41,7 @@ public interface UserService {
      * @param user
      * @return
      */
-    int saveUser(User user);
+    boolean saveUser(User user);
 
     /**
      * 修改用户信息
@@ -49,7 +49,7 @@ public interface UserService {
      * @param user
      * @return
      */
-    int updateById(User user);
+    boolean update(User user);
 
     /**
      * 根据id删除用户
@@ -57,5 +57,5 @@ public interface UserService {
      * @param id
      * @return
      */
-    int deleteById(int id);
+    boolean deleteById(int id);
 }
