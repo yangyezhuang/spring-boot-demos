@@ -50,6 +50,7 @@
         <module>spring-boot-upload</module>
         <module>spring-boot-validation</module>
         <module>spring-boot-xxljob</module>
+        <module>spring-boot-rocketmq</module>
     </modules>
 
 </project>
