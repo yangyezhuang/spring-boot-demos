@@ -1,8 +1,8 @@
 package com.yyz.elasticsearch.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.yyz.elasticsearch.entity.Content;
 import com.yyz.elasticsearch.dao.ContentDao;
+import com.yyz.elasticsearch.entity.Content;
 import com.yyz.elasticsearch.service.ContentService;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -21,10 +21,10 @@ import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.xcontent.XContentType;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;

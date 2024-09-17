@@ -3,10 +3,10 @@ package com.yyz.minio.controller;
 import com.yyz.minio.pojo.RestResponse;
 import com.yyz.minio.pojo.UploadFileParamsDto;
 import com.yyz.minio.service.FileService;
-import org.springframework.web.bind.annotation.RestController;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;

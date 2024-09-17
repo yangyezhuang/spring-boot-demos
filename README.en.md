@@ -12,16 +12,21 @@
 </p>
 
 ## Project Introduction
+
 `Spring boot demos` is a project used for deep learning and practical use of `spring boot`
->If you still have demos that you want to integrate, you can also click on [issue](https://github.com/yangyezhuang/spring-boot-demos/issues/new) Liti demand. ✊
+> If you still have demos that you want to integrate, you can also click
+> on [issue](https://github.com/yangyezhuang/spring-boot-demos/issues/new) Liti demand. ✊
 
 ## Development environment
+
 - **JDK 1.8+**
 - **Maven 3.8+**
-- **IntelliJ IDEA 2023.2+** (* Note: Be sure to use IDEA development and ensure the installation of the 'lombok' plugin*)
+- **IntelliJ IDEA 2023.2+** (* Note: Be sure to use IDEA development and ensure the installation of the 'lombok'
+  plugin*)
 - **MySQL 5.7+** (*It is recommended to use version 5.7 or higher as much as possible.*)
 
 ## Operation mode
+
 1. ` git clone https://github.com/yangyezhuang/spring-boot-demos.git `
 2. Open the clone project using IDEA and import Maven dependencies
 3. Initialize database data
@@ -46,11 +51,11 @@
 | √ | [spring-boot-mybatis-plus](./spring-boot-mybatis-plus)             | 集成 mybatis-plus 用于操作数据库     |
 | √ | [spring-boot-mybatis-pagehelper](./spring-boot-mybatis-pagehelper) | 集成 pagehelper 用于数据库分页       |
 | √ | [spring-boot-netty](./spring-boot-netty)                           | 集成 netty NIO通信              |
-| √ | [spring-boot-openfeign](./spring-boot-openfeign)                     | 集成 openfeign 实现接口调用         |
+| √ | [spring-boot-openfeign](./spring-boot-openfeign)                   | 集成 openfeign 实现接口调用         |
 | √ | [spring-boot-poi](./spring-boot-poi)                               | 集成 poi 用于表格导出导入             |
 | √ | [spring-boot-properties](./spring-boot-properties)                 | 读取 properties 配置            |
-| √ | [spring-boot-quartz](./spring-boot-quartz)                     | 集成 Quartz 用于实现任务调度          |
-| √ | [spring-boot-rabbitmq](./spring-boot-rabbitmq)                       | 集成 RabbitMQ 用于实现消息队列        |
+| √ | [spring-boot-quartz](./spring-boot-quartz)                         | 集成 Quartz 用于实现任务调度          |
+| √ | [spring-boot-rabbitmq](./spring-boot-rabbitmq)                     | 集成 RabbitMQ 用于实现消息队列        |
 | √ | [spring-boot-redis](./spring-boot-redis)                           | 集成 redis 用于缓存               |
 | √ | [spring-boot-response](./spring-boot-response)                     | 演示统一封装数据返回格式                |
 | √ | [spring-boot-security](./spring-boot-security)                     | 集成 security 用于认证和授权         |
@@ -60,8 +65,8 @@
 | √ | [spring-boot-validation](./spring-boot-validation)                 | 集成 validation 用于实现参数校验      |
 | √ | [spring-boot-xxljob](./spring-boot-xxljob)                         | 集成 xxl-job 用于任务调度           |
 
-
 ## Other
 
 ### License
+
 [MIT](http://opensource.org/licenses/MIT)

@@ -1,13 +1,8 @@
 package com.yyz.minio.pojo;
 
-import lombok.Data;
-import lombok.ToString;
-
 /**
  * 媒资文件查询请求模型类
  */
-@Data
-@ToString
 public class QueryMediaParamsDto {
     // 媒资文件名称
     private String filename;
@@ -15,4 +10,28 @@ public class QueryMediaParamsDto {
     private String fileType;
     // 审核状态
     private String auditStatus;
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
+    }
+
+    public String getAuditStatus() {
+        return auditStatus;
+    }
+
+    public void setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+    }
 }

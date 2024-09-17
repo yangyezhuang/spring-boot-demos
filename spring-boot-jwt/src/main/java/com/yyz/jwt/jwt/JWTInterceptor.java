@@ -3,7 +3,8 @@ package com.yyz.jwt.jwt;
 import com.auth0.jwt.exceptions.AlgorithmMismatchException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,8 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * token 拦截器
  */
-@Slf4j
 public class JWTInterceptor implements HandlerInterceptor {
+
+    private static final Logger log = LoggerFactory.getLogger(JWTInterceptor.class);
+
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {

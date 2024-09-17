@@ -12,7 +12,6 @@
 </dependency>
 ```
 
-
 ## RedisConfig.java
 
 ```java
@@ -100,8 +99,8 @@ public interface UserDao {
 }
 ```
 
-
 ## UserServiceImpl.java
+
 ```java
 /**
  * 用户接口实现类
@@ -167,7 +166,6 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-
 ## UserController.java
 
 ```java
@@ -228,8 +226,8 @@ public class UserController {
 
 ```
 
-
 ## RedisApplication.java
+
 ```java
 @MapperScan(basePackages = "com.yyz.redis.dao")
 @EnableCaching
@@ -241,8 +239,8 @@ public class RedisApplication {
 }
 ```
 
-
 ## application.yml
+
 ```yaml
 spring:
   datasource:
@@ -268,6 +266,7 @@ mybatis:
 ```
 
 ## UserMapper.xml
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >

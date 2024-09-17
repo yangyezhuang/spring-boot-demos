@@ -3,6 +3,7 @@
 > 此 demo 主要演示了 Spring Boot 如何读取 properties 配置文件
 
 ## application.yml
+
 ```yaml
 user:
   username: tom

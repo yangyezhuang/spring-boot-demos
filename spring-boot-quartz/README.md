@@ -3,6 +3,7 @@
 > 此 demo 主要演示了 Spring Boot 如何集成 Quartz
 
 ## pom.xml
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -11,7 +12,9 @@
 ```
 
 ## MyJob.java
+
 定义任务
+
 ```java
 public class MyJob extends QuartzJobBean {
     @Override
@@ -22,7 +25,9 @@ public class MyJob extends QuartzJobBean {
 ```
 
 ## QuartzConfig.java
+
 Quartz配置类，定义任务描述和具体的执行时间
+
 ```java
 @Configuration
 public class QuartzConfig {

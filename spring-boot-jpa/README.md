@@ -16,16 +16,11 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>8.0.30</version>
     </dependency>
-
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <optional>true</optional>
-    </dependency>
 </dependencies>
 ```
 
 ## User.java
+
 ```java
 /**
  * 用户实体类
@@ -70,6 +65,7 @@ public interface UserDao extends JpaRepository<User, Integer> {
 ```
 
 ## UserService.java
+
 ```java
 /**
  * 用户接口
@@ -89,7 +85,9 @@ public interface UserService {
 
 }
 ```
+
 ## UserServiceImpl.java
+
 ```java
 /**
  * 用户接口实现类
@@ -135,7 +133,6 @@ public class UserServiceImpl implements UserService {
 
 }
 ```
-
 
 ## UserController.java
 
@@ -225,8 +222,8 @@ public class UserController {
 }
 ```
 
-
 ## application.yml
+
 ```yaml
 spring:
   datasource:

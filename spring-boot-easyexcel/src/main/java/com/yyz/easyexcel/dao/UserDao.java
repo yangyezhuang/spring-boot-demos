@@ -14,7 +14,7 @@ import java.util.List;
 @Mapper
 public interface UserDao {
 
-     List<UserEntity> findAll();
+    List<UserEntity> findAll();
 
     // 如果是mybatis,尽量别直接调用多次insert,自己写一个mapper里面新增一个方法batchInsert,所有数据一次性插入
     int save(UserEntity data);

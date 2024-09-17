@@ -12,16 +12,19 @@
     </resultMap>
 
     <select id="queryAll" resultType="map">
-        select * from user;
+        select *
+        from user;
     </select>
 
     <select id="queryById" resultType="com.yyz.redis.pojo.User">
-        select * from user where id=#{id};
+        select *
+        from user
+        where id = #{id};
     </select>
 
     <insert id="saveUser" parameterType="com.yyz.redis.pojo.User">
-        insert into user (username,password,sex,age) values
-        (#{username},#{password},#{sex},#{age});
+        insert into user (username, password, sex, age)
+        values (#{username}, #{password}, #{sex}, #{age});
     </insert>
 
     <update id="updateById">
@@ -42,7 +45,9 @@
     </update>
 
     <delete id="deleteById">
-        delete from user where id=#{id};
+        delete
+        from user
+        where id = #{id};
     </delete>
 
 </mapper>

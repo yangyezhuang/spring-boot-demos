@@ -3,8 +3,8 @@ package com.yyz.minio.controller;
 import com.yyz.minio.pojo.*;
 import com.yyz.minio.service.FileService;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 

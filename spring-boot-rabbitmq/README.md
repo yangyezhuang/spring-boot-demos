@@ -12,7 +12,9 @@
 ```
 
 ## 生产者
+
 RabbitMQ配置类
+
 ```java
 @Configuration
 public class RabbitMQConfig {
@@ -56,7 +58,9 @@ public class RabbitMQConfig {
 ```
 
 ## Producer.java
+
 生产者发送消息
+
 ```java
 @RestController
 public class Producer {
@@ -74,6 +78,7 @@ public class Producer {
 ```
 
 ## application.yml
+
 ```yaml
 spring:
   rabbitmq:
@@ -86,12 +91,12 @@ spring:
     virtual-host: /
 ```
 
-
-
 ## 消费者
 
 ## Consumer.java
+
 消费者接收消息
+
 ```java
 @Component
 public class Consumer {
@@ -105,6 +110,7 @@ public class Consumer {
 ```
 
 ## application.yml
+
 ```yaml
 server:
   port: 8081
@@ -119,8 +125,8 @@ spring:
     virtual-host: /
 ```
 
-
 ## docker-sh
+
 ```shell
 docker run -d --restart=always -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest rabbitmq:management
 ```

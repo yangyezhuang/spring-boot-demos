@@ -1,14 +1,13 @@
 package com.yyz.mail.service.impl;
 
 import com.yyz.mail.service.MailService;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-
-import javax.servlet.http.HttpSession;
 
 /**
  * service
@@ -16,9 +15,12 @@ import javax.servlet.http.HttpSession;
  * @author YangYezhuang
  * @date 2023/8/21 19:00
  */
-@Slf4j
 @Service
 public class MailServiceImpl implements MailService {
+
+    private static final Logger log = LoggerFactory.getLogger(MailServiceImpl.class);
+
+
     @Autowired
     JavaMailSender javaMailSender;
 

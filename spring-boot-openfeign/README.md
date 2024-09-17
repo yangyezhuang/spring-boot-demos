@@ -3,7 +3,9 @@
 > 此 demo 主要演示了 Spring Boot 如何集成 OpenFeign
 
 ## 服务端
+
 ## ServerController.java
+
 ```java
 @RestController
 @RequestMapping("/demo")
@@ -17,13 +19,14 @@ public class ServerController {
 ```
 
 ## application.yml
+
 ```yaml
 server:
   port: 8081
 ```
 
-
 ## 客户端
+
 ## pom.xml
 
 ```xml
@@ -35,6 +38,7 @@ server:
 ```
 
 ## ClientController.java
+
 ```java
 @RestController
 @RequestMapping("feign")
@@ -62,7 +66,9 @@ public interface FeignDemo {
 ```
 
 ## ErrorMessage.java
+
 熔断降级
+
 ```java
 @Component
 public class ErrorMessage implements FeignDemo {
@@ -73,8 +79,8 @@ public class ErrorMessage implements FeignDemo {
 }
 ```
 
-
 ## application.yml
+
 ```yaml
 server:
   port: 8080

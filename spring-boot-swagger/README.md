@@ -99,6 +99,7 @@ public class UserController {
 ```
 
 ## application.yml
+
 ```yaml
 spring:
   mvc:

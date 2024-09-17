@@ -12,12 +12,13 @@
     </resultMap>
 
     <select id="getAll" resultMap="UserMap">
-        select * from test_excel;
+        select *
+        from test_excel;
     </select>
 
     <insert id="save" parameterType="com.yyz.poi.pojo.User">
-        insert into test_excel (id,username,password,sex,age) values
-        (#{id},#{username},#{password},#{sex},#{age});
+        insert into test_excel (id, username, password, sex, age)
+        values (#{id}, #{username}, #{password}, #{sex}, #{age});
     </insert>
 
 </mapper>

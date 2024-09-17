@@ -1,7 +1,5 @@
 package com.yyz.mail.service;
 
-import javax.servlet.http.HttpSession;
-
 /**
  * MailService
  *

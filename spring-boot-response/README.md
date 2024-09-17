@@ -17,17 +17,13 @@
         <artifactId>mybatis-spring-boot-starter</artifactId>
         <version>2.3.0</version>
     </dependency>
-
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <optional>true</optional>
-    </dependency>
 </dependencies>
 ```
 
 ## Result.java
+
 封装数据类型
+
 ```java
 @Data
 public class Result {
@@ -113,7 +109,9 @@ public class Result {
 ```
 
 ## ResultCode.java
+
 状态码
+
 ```java
 public enum ResultCode {
     SUCCESS(1, "成功"),
@@ -139,7 +137,9 @@ public enum ResultCode {
 ```
 
 ## ResponseAdvice.java
+
 用来封装统一数据返回格式
+
 ```java
 @RestControllerAdvice
 public class ResponseAdvice implements ResponseBodyAdvice<Object> {
@@ -173,9 +173,13 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     }
 }
 ```
+
 ## RestExceptionHandler.java
+
 全局异常处理器
->  controller中接口发生Exception异常时，就会进入到Execption方法中进行捕获， 将杂乱的异常信息，转换成指定格式后交给ResponseAdvice方法进行统一格式封装并返回给前端。
+> controller中接口发生Exception异常时，就会进入到Execption方法中进行捕获，
+> 将杂乱的异常信息，转换成指定格式后交给ResponseAdvice方法进行统一格式封装并返回给前端。
+
 ```java
 @Slf4j
 @RestControllerAdvice
@@ -196,8 +200,8 @@ public class RestExceptionHandler {
 }
 ```
 
-
 ## UserController.java
+
 用户控制层
 
 ```java

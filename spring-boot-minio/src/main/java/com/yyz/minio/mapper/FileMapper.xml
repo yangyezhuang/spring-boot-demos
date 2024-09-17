@@ -16,7 +16,8 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, filename, file_type, bucket, file_path, url, create_date, file_size
+        id
+        , filename, file_type, bucket, file_path, url, create_date, file_size
     </sql>
 
 </mapper>

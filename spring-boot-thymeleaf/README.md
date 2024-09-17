@@ -3,6 +3,7 @@
 > 此 demo 主要演示了 Spring Boot 如何集成 thymeleaf
 
 ## pom.xml
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -11,6 +12,7 @@
 ```
 
 ## application.yml
+
 ```yaml
 spring:
   thymeleaf:
@@ -61,6 +63,7 @@ public class IndexController {
 ```
 
 ## index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">

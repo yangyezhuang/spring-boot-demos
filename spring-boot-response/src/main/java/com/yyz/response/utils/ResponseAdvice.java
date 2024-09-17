@@ -1,7 +1,7 @@
 package com.yyz.response.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -33,12 +33,15 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     /**
      * 处理返回结果
      */
-    @SneakyThrows
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
         // 处理字符串类型数据
         if (body instanceof String) {
-            return objectMapper.writeValueAsString(Result.success(body));
+            try {
+                return objectMapper.writeValueAsString(Result.success(body));
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
         }
         // 返回类型是否已经封装
         if (body instanceof Result) {

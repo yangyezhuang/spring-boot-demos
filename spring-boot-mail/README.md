@@ -71,6 +71,7 @@ public class MailServiceImpl implements MailService {
 ```
 
 ## application.yml
+
 ```yaml
 spring:
   mail:

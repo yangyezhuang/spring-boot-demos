@@ -21,11 +21,11 @@
     <!--查询单个-->
     <select id="queryById" resultMap="ContentMap">
         select good_shop,
-               good_name,
-               good_price,
-               comment_num,
-               good_link,
-               good_img
+        good_name,
+        good_price,
+        comment_num,
+        good_link,
+        good_img
         from goods
         where good_id = #{goodId}
     </select>

@@ -1,9 +1,7 @@
 package com.yyz.pagehelper.service;
 
 import com.github.pagehelper.PageInfo;
-import com.yyz.pagehelper.dao.UserDao;
 import com.yyz.pagehelper.pojo.User;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 

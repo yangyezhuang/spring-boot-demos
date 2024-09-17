@@ -41,6 +41,7 @@
         <module>spring-boot-quartz</module>
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-rerty</module>
         <module>spring-boot-response</module>
         <module>spring-boot-security</module>
         <module>spring-boot-session</module>
@@ -52,5 +53,16 @@
         <module>spring-boot-xxljob</module>
         <module>spring-boot-rocketmq</module>
     </modules>
+
+    <!--父类声明公共依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.30</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

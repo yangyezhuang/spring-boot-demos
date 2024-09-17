@@ -2,8 +2,8 @@
 
 > 此 demo 主要演示了 Spring Boot 如何实现文件上传
 
-
 ## FileController.java
+
 ```java
 @RestController
 public class FileController {
@@ -40,6 +40,7 @@ public class FileController {
 ```
 
 ## FileService.java
+
 ```java
 public interface FileService {
 
@@ -50,6 +51,7 @@ public interface FileService {
 ```
 
 ## FileServiceImpl.java
+
 ```java
 @Service
 public class FileServiceImpl implements FileService {
@@ -83,8 +85,6 @@ public class FileServiceImpl implements FileService {
     }
 }
 ```
-
-
 
 ## application.yml
 

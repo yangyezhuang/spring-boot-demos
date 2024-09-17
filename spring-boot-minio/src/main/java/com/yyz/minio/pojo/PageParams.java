@@ -1,17 +1,8 @@
 package com.yyz.minio.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
 /**
  * 分页查询的参数
  */
-@Data
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class PageParams {
     /**
      * 当前页码
@@ -22,4 +13,19 @@ public class PageParams {
      */
     private Long pageSize = 30L;
 
+    public Long getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(Long pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Long getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+    }
 }

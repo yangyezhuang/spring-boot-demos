@@ -13,5 +13,5 @@ import javax.servlet.http.HttpServletResponse;
 public interface ExcelService {
     void importExcel(MultipartFile file) throws Exception;
 
-    void exportExcel(HttpServletResponse response)  throws Exception;
+    void exportExcel(HttpServletResponse response) throws Exception;
 }

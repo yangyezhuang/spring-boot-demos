@@ -1,7 +1,8 @@
 package com.yyz.session.interceptor;
 
 import com.yyz.session.model.User;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -16,9 +17,10 @@ import javax.servlet.http.HttpSession;
  * @author YZ.YANG
  * @date 2023-10-04 11:00
  */
-@Slf4j
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
+
+    private static final Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
 
     // 在controller之前执行
     @Override

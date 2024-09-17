@@ -1,9 +1,8 @@
 package com.yyz.shiro.dao;
 
 import com.yyz.shiro.pojo.User;
-import org.apache.ibatis.annotations.*;
-
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 
 @Mapper

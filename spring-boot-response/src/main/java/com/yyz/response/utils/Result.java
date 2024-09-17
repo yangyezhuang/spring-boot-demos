@@ -1,18 +1,39 @@
 package com.yyz.response.utils;
 
-import lombok.Data;
-
 /**
  * 封装数据类型
  *
  * @author YZ.YANG
  * @date 2023/8/31 10:41
  */
-@Data
 public class Result {
     private int code;
     private String msg;
     private Object data;
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
 
     public void setResultCode(ResultCode code) {
         this.code = code.getCode();

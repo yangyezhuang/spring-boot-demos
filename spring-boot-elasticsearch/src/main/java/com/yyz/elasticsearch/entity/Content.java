@@ -1,13 +1,8 @@
 package com.yyz.elasticsearch.entity;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 /**
  * (商品)实体类
  */
-@Data
-@NoArgsConstructor
 public class Content {
 
     private int goodId;
@@ -24,5 +19,60 @@ public class Content {
 
     private String goodImg;
 
+    public int getGoodId() {
+        return goodId;
+    }
+
+    public void setGoodId(int goodId) {
+        this.goodId = goodId;
+    }
+
+    public String getGoodShop() {
+        return goodShop;
+    }
+
+    public void setGoodShop(String goodShop) {
+        this.goodShop = goodShop;
+    }
+
+    public String getGoodName() {
+        return goodName;
+    }
+
+    public void setGoodName(String goodName) {
+        this.goodName = goodName;
+    }
+
+    public String getGoodPrice() {
+        return goodPrice;
+    }
+
+    public void setGoodPrice(String goodPrice) {
+        this.goodPrice = goodPrice;
+    }
+
+    public String getCommentNum() {
+        return commentNum;
+    }
+
+    public void setCommentNum(String commentNum) {
+        this.commentNum = commentNum;
+    }
+
+    public String getGoodLink() {
+        return goodLink;
+    }
+
+    public void setGoodLink(String goodLink) {
+        this.goodLink = goodLink;
+    }
+
+    public String getGoodImg() {
+        return goodImg;
+    }
+
+    public void setGoodImg(String goodImg) {
+        this.goodImg = goodImg;
+    }
 }
 

@@ -13,6 +13,7 @@
 ```
 
 ## User.java
+
 ```java
 @Data
 public class User {
@@ -36,6 +37,7 @@ public interface UserDao extends BaseMapper<User> {
 ```
 
 ## UserService.java
+
 ```java
 /**
  * 用户接口
@@ -72,7 +74,9 @@ public interface UserService {
     int deleteById(int id);
 }
 ```
+
 ## UserServiceImpl.java
+
 ```java
 /**
  * 用户接口实现类
@@ -116,7 +120,6 @@ public class UserServiceImpl implements UserService {
     }
 }
 ```
-
 
 ## UserController.java
 
@@ -190,8 +193,8 @@ public class UserController {
 
 ```
 
-
 ## application.yml
+
 ```yaml
 mybatis-plus:
   global-config:

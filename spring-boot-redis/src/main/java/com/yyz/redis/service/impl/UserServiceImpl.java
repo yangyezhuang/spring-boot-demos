@@ -3,7 +3,8 @@ package com.yyz.redis.service.impl;
 import com.yyz.redis.dao.UserDao;
 import com.yyz.redis.pojo.User;
 import com.yyz.redis.service.UserService;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -20,10 +21,11 @@ import java.util.List;
  * @author YangYezhuang
  * @date 2023/8/21 18:30
  */
-@Slf4j
 @CacheConfig(cacheNames = "user")
 @Service
 public class UserServiceImpl implements UserService {
+
+    private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     UserDao userDao;

@@ -21,7 +21,9 @@
 ```
 
 ## User.java
+
 用户实体类
+
 ```java
 @Data
 public class User {
@@ -34,7 +36,9 @@ public class User {
 ```
 
 ## UserDao.java
+
 用户DAO接口
+
 ```java
 @Mapper
 public interface UserDao {
@@ -53,7 +57,9 @@ public interface UserDao {
 ```
 
 ## UserService.java
+
 用户接口
+
 ```java
 public interface UserService {
     List<User> queryAll(int pageNum, int pageSize);
@@ -61,8 +67,11 @@ public interface UserService {
     PageInfo<User> queryBySex(String sex, int pageNum, int pageSize);
 }
 ```
+
 ## UserServiceImpl.java
+
 用户接口实现类
+
 ```java
 @Service
 public class UserServiceImpl implements UserService {
@@ -86,9 +95,10 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-
 ## UserController.java
+
 用户控制层
+
 ```java
 @RestController
 @RequestMapping("/user")
@@ -124,8 +134,8 @@ public class UserController {
 }
 ```
 
-
 ## application.yml
+
 ```yaml
 spring:
   datasource:

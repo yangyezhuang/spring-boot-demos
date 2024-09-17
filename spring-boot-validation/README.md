@@ -2,8 +2,8 @@
 
 > 此 demo 主要演示了 Spring Boot 如何集成 validation
 
-
 ## pom
+
 ````xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -11,8 +11,8 @@
 </dependency>
 ````
 
-
 ## User.java
+
 ```java
 /**
  * User 实体类
@@ -43,7 +43,9 @@ public class User {
 ```
 
 ## EnumString.java
+
 自定义注解
+
 ```java
 @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
 @Retention(RUNTIME)
@@ -77,7 +79,9 @@ public @interface EnumString {
 ```
 
 ## EnumStringValidator.java
+
 自定义校验逻辑
+
 ```java
 public class EnumStringValidator implements ConstraintValidator<EnumString, String> {
 
@@ -99,7 +103,9 @@ public class EnumStringValidator implements ConstraintValidator<EnumString, Stri
 ```
 
 ## ValidationGroups.java
+
 分组校验
+
 ```java
 public class ValidationGroups {
     public interface Insert {}
@@ -109,7 +115,9 @@ public class ValidationGroups {
 ```
 
 ## TestController.java
+
 控制层
+
 ```java
 @RestController
 public class TestController {

@@ -17,16 +17,11 @@
         <artifactId>mybatis-spring-boot-starter</artifactId>
         <version>2.3.0</version>
     </dependency>
-
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <optional>true</optional>
-    </dependency>
 </dependencies>
 ```
 
 ## User.java
+
 ```java
 @Data
 public class User {
@@ -62,6 +57,7 @@ public interface UserDao {
 ```
 
 ## UserService.java
+
 ```java
 /**
  * 用户接口
@@ -69,7 +65,9 @@ public interface UserDao {
 public interface UserService extends UserDao {
 }
 ```
+
 ## UserServiceImpl.java
+
 ```java
 /**
  * 用户接口实现类
@@ -106,7 +104,6 @@ public class UserServiceImpl implements UserService {
     }
 }
 ```
-
 
 ## UserController.java
 
@@ -187,8 +184,8 @@ public class UserController {
 
 ```
 
-
 ## MybatisApplication.java
+
 ```java
 @MapperScan(basePackages = "com.yyz.mybatis.dao")
 @SpringBootApplication
@@ -201,9 +198,8 @@ public class MybatisApplication {
 }
 ```
 
-
-
 ## application.yml
+
 ```yaml
 spring:
   datasource:
@@ -217,6 +213,7 @@ mybatis:
 ```
 
 ## UserMapper.xml
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >

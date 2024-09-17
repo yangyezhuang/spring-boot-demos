@@ -5,7 +5,6 @@ import com.yyz.easyexcel.dao.UserDao;
 import com.yyz.easyexcel.entity.UserEntity;
 import com.yyz.easyexcel.service.ExcelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
